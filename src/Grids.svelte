@@ -61,78 +61,12 @@
     box-sizing: border-box;
   }
 
-  .layout {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 40px;
-  }
-
-  .specs {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    margin-bottom: 20px;
-  }
-
-  .specs p {
-    margin-right: 20px;
-  }
-
-  .specs p .value-text {
-    font-weight: bold;
-  }
-
-  .grid-preview {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-  }
-
-  .margin {
-    flex: none;
-    height: 40px;
-    background: #90f;
-    opacity: 0.2;
-  }
-
-  .column {
-    flex: none;
-    height: 40px;
-    background: #90f;
-  }
-
-  .gutter {
-    flex: none;
-    height: 40px;
-    background: #90f;
-    opacity: 0.15;
-  }
-  .accent {
-    color: #90f;
-  }
   main {
     padding: 80px;
-  }
-  h1 {
-    font-weight: 900;
-    margin-bottom: 40px;
-    font-size: 40px;
-  }
-  h1 span {
-    /* font-weight: 700; */
-    margin-right: 4px;
-  }
-  .inputs {
-    margin-bottom: 40px;
   }
 </style>
 
 <main>
-
-  <h1>
-    <span class="accent">{gridLayouts.length}</span>
-    Pixel Grids
-  </h1>
   <section class="inputs">
     <input type="number" bind:value={totalWidth} />
     <input type="number" bind:value={columns} />

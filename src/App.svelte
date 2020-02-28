@@ -6,4 +6,10 @@
 
 </style>
 
+<!-- things I could maybe break out
+  • headline
+  • input (x4)
+  • grid display
+ -->
+
 <Grids />

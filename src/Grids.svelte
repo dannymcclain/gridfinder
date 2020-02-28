@@ -110,46 +110,64 @@
   .accent {
     color: #90f;
   }
+  main {
+    padding: 80px;
+  }
+  h1 {
+    font-weight: 900;
+    margin-bottom: 40px;
+    font-size: 40px;
+  }
+  h1 span {
+    /* font-weight: 700; */
+    margin-right: 4px;
+  }
+  .inputs {
+    margin-bottom: 40px;
+  }
 </style>
 
-<h1>
-  Pixel Grids
-  <span class="accent">({gridLayouts.length})</span>
-</h1>
-<section class="inputs">
-  <input type="number" bind:value={totalWidth} />
-  <input type="number" bind:value={columns} />
-  <input type="number" bind:value={minGutter} />
-  <button on:click={findGrids}>Calculate</button>
-</section>
-{#each gridLayouts as grid, i}
-  <div class="layout" key={'Layout ' + i}>
-    <div class="specs">
-      <p>
-        Column:
-        <span class="value-text">{grid.column}</span>
-      </p>
-      <p>
-        Gutter:
-        <span class="value-text">{grid.gutter}</span>
-      </p>
-      <p>
-        Margin:
-        <span class="value-text">{grid.margin}</span>
-      </p>
-    </div>
-    <div class="grid-preview">
-      <div class="margin" style="width: {grid.margin}px" />
-      <!-- <p>There are {columns} columns.</p> -->
-      {#each columnLength as columnPreview, i}
-        <div class="column" style="width: {grid.column}px" />
-        <div class="gutter" style="width: {grid.gutter}px" />
-      {/each}
-      <div class="column" style="width: {grid.column}px" />
-      <div class="margin" style={{ width: grid.margin + 'px' }} />
-    </div>
+<main>
 
-  </div>
-{:else}
-  <p>No grids. Bummer.</p>
-{/each}
+  <h1>
+    <span class="accent">{gridLayouts.length}</span>
+    Pixel Grids
+  </h1>
+  <section class="inputs">
+    <input type="number" bind:value={totalWidth} />
+    <input type="number" bind:value={columns} />
+    <input type="number" bind:value={minGutter} />
+    <button on:click={findGrids}>Calculate</button>
+  </section>
+  {#each gridLayouts as grid, i}
+    <div class="layout" key={'Layout ' + i}>
+      <div class="specs">
+        <p>
+          Column:
+          <span class="value-text">{grid.column}</span>
+        </p>
+        <p>
+          Gutter:
+          <span class="value-text">{grid.gutter}</span>
+        </p>
+        <p>
+          Margin:
+          <span class="value-text">{grid.margin}</span>
+        </p>
+      </div>
+      <div class="grid-preview">
+        <div class="margin" style="width: {grid.margin}px" />
+        <!-- <p>There are {columns} columns.</p> -->
+        {#each columnLength as columnPreview, i}
+          <div class="column" style="width: {grid.column}px" />
+          <div class="gutter" style="width: {grid.gutter}px" />
+        {/each}
+        <div class="column" style="width: {grid.column}px" />
+        <div class="margin" style={{ width: grid.margin + 'px' }} />
+      </div>
+
+    </div>
+  {:else}
+    <p>No grids. Bummer.</p>
+  {/each}
+</main>

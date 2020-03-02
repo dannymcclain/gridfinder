@@ -48,18 +48,22 @@
   }
   input {
     flex: 1;
-    border: 2px solid #ccc;
-    transition: border-color 200ms cubic-bezier(0.4, 0, 0, 1);
+    border: 1px solid var(--gray-color-light);
+    transition: border-color 200ms linear;
     padding: 16px;
     margin-bottom: 20px;
-    border-radius: 8px;
+    border-radius: 4px;
     margin: 0;
+    background: var(--color-white);
+    box-shadow: var(--drop-shadow);
+    width: 200px;
   }
   input:focus {
     outline: none;
-    border: 2px solid var(--accent-color);
+    border: 1px solid var(--accent-color);
   }
   button {
+    width: 200px;
     cursor: pointer;
     outline: none;
     border: none;
@@ -70,6 +74,10 @@
     border-radius: 8px;
     height: 54px;
     margin: 0;
+    transition: background-color 200ms linear;
+  }
+  button:hover {
+    background: var(--accent-color-dark);
   }
 </style>
 

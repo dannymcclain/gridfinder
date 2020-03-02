@@ -1,5 +1,5 @@
 <script>
-  export let grids = [];
+  export let grids;
 </script>
 
 <style>
@@ -7,22 +7,27 @@
     flex: 1;
     display: flex;
     flex-direction: column;
+    background: var(--color-white);
+    border: 1px solid var(--gray-color-light);
+    border-radius: 4px;
+  }
+  .layout {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    border-bottom: 1px solid var(--gray-color-light);
+    overflow-x: scroll;
   }
   .grid-preview {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
   }
-  .layout {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 40px;
-  }
   .specs {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    margin-bottom: 12px;
+    margin-bottom: 20px;
   }
 
   .specs p {
@@ -35,21 +40,22 @@
   .margin {
     flex: none;
     height: 40px;
-    background: var(--accent-color);
-    opacity: 0.2;
+    background: var(--color-white);
+    /* opacity: 0.2; */
   }
 
   .column {
     flex: none;
     height: 40px;
     background: var(--accent-color);
+    border-radius: 2px;
   }
 
   .gutter {
     flex: none;
     height: 40px;
-    background: var(--accent-color);
-    opacity: 0.15;
+    background: var(--color-white);
+    /* opacity: 0.15; */
   }
 </style>
 
@@ -76,8 +82,8 @@
           <div class="column" style="width: {grid.column}px" />
           <div class="gutter" style="width: {grid.gutter}px" />
         {/each}
-        <div class="column" style="width: {grid.column}px" />
-        <div class="margin" style={{ width: grid.margin + 'px' }} />
+        <div class="column" style="width: {grid.column}px;" />
+        <div class="margin" style="width: {grid.margin}px;" />
       </div>
 
     </div>

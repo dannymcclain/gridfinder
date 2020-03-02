@@ -10,7 +10,7 @@
   }
   h1 span {
     margin-right: 4px;
-    color: #90f;
+    color: var(--accent-color);
   }
 </style>
 

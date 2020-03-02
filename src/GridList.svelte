@@ -35,20 +35,20 @@
   .margin {
     flex: none;
     height: 40px;
-    background: #90f;
+    background: var(--accent-color);
     opacity: 0.2;
   }
 
   .column {
     flex: none;
     height: 40px;
-    background: #90f;
+    background: var(--accent-color);
   }
 
   .gutter {
     flex: none;
     height: 40px;
-    background: #90f;
+    background: var(--accent-color);
     opacity: 0.15;
   }
 </style>

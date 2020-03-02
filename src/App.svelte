@@ -53,6 +53,9 @@
       Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     padding: 80px;
   }
+  :global(:root) {
+    --accent-color: #7568f6;
+  }
   main {
     display: flex;
     flex-direction: column;

@@ -75,13 +75,14 @@
   main {
     display: flex;
     flex-direction: column;
+    max-width: 860px;
+    margin: 0 auto;
   }
 </style>
 
 <InfoPanel {isOpen} on:close={closeInfo} />
 <main>
-  <p on:click={openModal}>Open the modal</p>
-  <Headline howMany={gridLayouts.length} />
+  <Headline howMany={gridLayouts.length} on:open={openModal} />
   <GridForm on:calculate={calculateValues} />
   <GridList grids={gridLayouts} />
 </main>

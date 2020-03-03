@@ -120,7 +120,7 @@
       <code>total width</code>
       of your content, the
       <code>number of columns</code>
-      of want, and the
+      you want, and the
       <code>minimum gutter</code>
       size you’d accept, and Pixel Grids will calculate every grid layout that
       contains only whole pixel values.

@@ -28,14 +28,16 @@
     pointer-events: none;
     opacity: 0;
     background: rgba(11, 21, 47, 0.4);
+    transition: opacity 150ms linear;
   }
   .info.is-open {
     opacity: 1;
     pointer-events: auto;
   }
-  .info-overlay {
+  /* .info-overlay {
     flex-grow: 2;
-    height: 100%;
+    height: 100vh;
+    width: 100vw;
     position: relative;
     background: rgba(11, 21, 47, 0.4);
     opacity: 0;
@@ -43,7 +45,7 @@
   }
   .info.is-open .info-overlay {
     opacity: 1;
-  }
+  } */
   .info-panel {
     padding: 40px 80px 40px 40px;
     height: 100%;
@@ -54,7 +56,7 @@
     opacity: 0;
     transition: transform 200ms cubic-bezier(0.35, 0, 0, 1),
       opacity 250ms linear;
-    transition-delay: 100ms;
+    /* transition-delay: 100ms; */
   }
   .info.is-open .info-panel {
     transform: translateX(0);
@@ -75,7 +77,6 @@
 </style>
 
 <div class="info {isOpen ? 'is-open' : ''}">
-  <!-- <div class="info-overlay" on:click={closeModal} /> -->
   <div class="info-panel">
     <p on:click={closeModal}>CLOSE</p>
     <h2>About</h2>
@@ -86,4 +87,5 @@
       calculate every grid layout that contains only whole pixel values.
     </p>
   </div>
+  <!-- <div class="info-overlay" on:click={closeModal} /> -->
 </div>

@@ -4,9 +4,10 @@
 
 <style>
   h1 {
-    font-weight: 900;
+    font-size: 32px;
+    font-weight: 800;
     margin-bottom: 40px;
-    font-size: 40px;
+    line-height: 38px;
   }
   h1 span {
     margin-right: 4px;

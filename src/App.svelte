@@ -1,11 +1,18 @@
 <script>
+  import InfoPanel from "./InfoPanel.svelte";
   import Headline from "./Headline.svelte";
   import GridForm from "./GridForm.svelte";
   import GridList from "./Gridlist.svelte";
   import { onMount } from "svelte";
 
   let gridLayouts = [];
-
+  let isOpen = false;
+  function openModal() {
+    isOpen = true;
+  }
+  function closeInfo() {
+    isOpen = false;
+  }
   function calculateValues(event) {
     let data = event.detail.data;
     findGrids(data);
@@ -71,7 +78,9 @@
   }
 </style>
 
+<InfoPanel {isOpen} on:close={closeInfo} />
 <main>
+  <p on:click={openModal}>Open the modal</p>
   <Headline howMany={gridLayouts.length} />
   <GridForm on:calculate={calculateValues} />
   <GridList grids={gridLayouts} />

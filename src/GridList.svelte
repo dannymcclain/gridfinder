@@ -85,6 +85,9 @@
     background: var(--color-white);
     /* opacity: 0.15; */
   }
+  .no-grids {
+    padding: 40px;
+  }
 </style>
 
 <section class="grid-previews-container">
@@ -116,6 +119,6 @@
 
     </div>
   {:else}
-    <p>No grids. Bummer.</p>
+    <p class="no-grids">🤷‍♂️ No grids. Bummer.</p>
   {/each}
 </section>

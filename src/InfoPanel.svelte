@@ -66,9 +66,28 @@
   }
   .close {
     margin-bottom: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+  .close img {
+    margin-right: 4px;
+  }
+  .close p {
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 14px;
+    color: var(--gray-color-mid);
+    transition: color 200ms linear;
   }
   .close:hover {
     cursor: pointer;
+  }
+  .close:hover p {
+    color: var(--gray-color-dark);
   }
   h2 {
     font-weight: 800;
@@ -108,11 +127,10 @@
 
 <div class="info {isOpen ? 'is-open' : ''}">
   <div class="info-panel">
-    <img
-      class="close"
-      on:click={closeModal}
-      src="./images/icon-close.svg"
-      alt="close icon" />
+    <div class="close" on:click={closeModal}>
+      <img src="./images/icon-close.svg" alt="close icon" />
+      <p>Close</p>
+    </div>
     <h2>About</h2>
     <p>
       Pixel Grids is a simple tool to help you calculate pixel-perfect grids.

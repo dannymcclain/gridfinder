@@ -32,13 +32,24 @@
     color: var(--accent-color);
   }
   .info {
-    padding: 12px;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 14px;
+    color: var(--gray-color-mid);
+    transition: color 200ms linear;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
   }
   .info:hover {
     cursor: pointer;
+    color: var(--gray-color-dark);
   }
-  .info:hover .outer {
-    stroke: #8D95A5;
+  .info img {
+    margin-right: 4px;
   }
 </style>
 
@@ -47,16 +58,8 @@
     <span class="accent">{howMany}</span>
     Pixel Grids
   </h1>
-  <!-- <img
-    class="info"
-    on:click={openModal}
-    src="./images/icon-info.svg"
-    alt="info icon" /> -->
-    <svg class="info"
-    on:click={openModal} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M12 12V16" stroke="#8D95A5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<circle class="outer" cx="12" cy="12" r="10" stroke="#D5DDE2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<circle cx="12" cy="8" r="1" fill="#8D95A5"/>
-</svg>
-
+  <div class="info" on:click={openModal}>
+    <img src="./images/icon-info.svg" alt="info icon" />
+    <p>Info</p>
+  </div>
 </header>

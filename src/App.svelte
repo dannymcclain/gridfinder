@@ -2,7 +2,7 @@
   import InfoPanel from "./InfoPanel.svelte";
   import Headline from "./Headline.svelte";
   import GridForm from "./GridForm.svelte";
-  import GridList from "./Gridlist.svelte";
+  import GridList from "./GridList.svelte";
   import { onMount } from "svelte";
 
   let gridLayouts = [];

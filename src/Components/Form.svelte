@@ -4,7 +4,7 @@
 
   let totalWidth = 1200;
   let columns = 12;
-  let minGutter = 20;
+  let minGutter = 8;
   let marginRatio = 0;
 
   const dispatch = createEventDispatcher();
@@ -44,10 +44,9 @@
     flex-direction: column-reverse;
   }
   label {
-    font-size: 12px;
-    font-weight: 800;
-    letter-spacing: -0.02em;
-    line-height: 14px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1;
     margin-bottom: 8px;
     color: var(--color-gray-dark);
     transition: color 200ms linear;
@@ -61,6 +60,10 @@
     margin-right: 8px;
   }
   input {
+    font-family: "Source Code Pro", monospace;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1;
     border: 1px solid var(--color-white);
     color: var(--color-gray-dark);
     flex: 1;
@@ -72,9 +75,6 @@
     background: var(--color-white);
     box-shadow: var(--drop-shadow);
     width: 200px;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 19px;
   }
   input:focus {
     outline: none;
@@ -87,10 +87,9 @@
     color: #fff;
     cursor: pointer;
     font-size: 16px;
-    font-weight: 800;
+    font-weight: 700;
     height: 54px;
-    line-height: 19px;
-    letter-spacing: -0.02em;
+    line-height: 1;
     margin: 0;
     outline: none;
     text-align: center;

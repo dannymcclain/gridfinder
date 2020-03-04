@@ -24,18 +24,17 @@
   }
   h1 {
     font-size: 32px;
-    font-weight: 800;
-    line-height: 38px;
+    font-weight: 700;
+    line-height: 1;
   }
   h1 span {
-    margin-right: 4px;
+    margin-right: 2px;
     color: var(--color-accent);
   }
   .info {
-    font-size: 12px;
-    font-weight: 800;
-    letter-spacing: -0.02em;
-    line-height: 14px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1;
     color: var(--color-accent);
     display: flex;
     flex-direction: row;

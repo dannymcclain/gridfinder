@@ -54,10 +54,9 @@
 
   .specs p {
     color: var(--color-gray-mid);
-    font-size: 12px;
-    font-weight: 800;
-    letter-spacing: -0.02em;
-    line-height: 14px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1;
     margin-right: 12px;
   }
 

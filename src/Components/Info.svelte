@@ -49,7 +49,7 @@
   .info-panel {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: flex-start;
     padding: 40px 80px 40px 40px;
     height: 100%;
@@ -77,10 +77,9 @@
     margin-right: 4px;
   }
   .close p {
-    font-size: 12px;
-    font-weight: 800;
-    letter-spacing: -0.02em;
-    line-height: 14px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1;
     color: var(--color-accent);
   }
   .close:hover {
@@ -90,29 +89,37 @@
     color: var(--color-accent-dark);
   }
   h2 {
-    font-weight: 800;
+    font-weight: 700;
     font-size: 32px;
     line-height: 38px;
     color: var(--color-gray-dark);
     margin-bottom: 20px;
   }
   p {
-    font-weight: 500;
-    font-size: 16px;
+    font-weight: 400;
+    font-size: 18px;
     line-height: 28px;
-    color: var(--color-gray-mid);
+    color: var(--color-gray-dark);
   }
-  strong {
-    font-weight: 700;
-  }
+  /* code {
+    font-family: "Source Code Pro", monospace;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1;
+    color: var(--color-accent-dark);
+    padding: 2px 4px;
+    background: rgba(61, 184, 245, 0.1);
+    border: 1px solid var(--color-accent);
+    border-radius: 4px;
+  } */
   .created-by {
     margin-top: 40px;
   }
   a {
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 800;
     letter-spacing: -0.02em;
-    line-height: 14px;
+    line-height: 1;
     color: var(--color-accent);
     text-decoration: none;
   }
@@ -123,22 +130,19 @@
 
 <div class="info {isOpen ? 'is-open' : ''}">
   <div class="info-panel">
-    <div class="close" on:click={closeModal}>
-      <img src="./images/icon-close.svg" alt="close icon" />
-      <p>Close</p>
+    <div class="main-content">
+      <div class="close" on:click={closeModal}>
+        <img src="./images/icon-close.svg" alt="close icon" />
+        <p>Close</p>
+      </div>
+      <h2>About</h2>
+      <p>
+        Pixel Grids is a simple tool to help you calculate pixel-perfect grids.
+        Enter the total width of your content, the number of columns you want,
+        and the minimum gutter size you’d accept, and Pixel Grids will calculate
+        every grid layout that contains only whole pixel values.
+      </p>
     </div>
-    <h2>About</h2>
-    <p>
-      Pixel Grids is a simple tool to help you calculate pixel-perfect grids.
-      Enter the
-      <strong>total width</strong>
-      of your content, the
-      <strong>number of columns</strong>
-      you want, and the
-      <strong>minimum gutter</strong>
-      size you’d accept, and Pixel Grids will calculate every grid layout that
-      contains only whole pixel values.
-    </p>
     <a class="created-by" href="https://dannymcclain.com" target="_blank">
       ✌️ Created by Danny McClain
     </a>

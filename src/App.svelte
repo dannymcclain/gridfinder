@@ -1,8 +1,8 @@
 <script>
-  import InfoPanel from "./InfoPanel.svelte";
-  import Headline from "./Headline.svelte";
-  import GridForm from "./GridForm.svelte";
-  import GridList from "./GridList.svelte";
+  import Info from "./Components/Info.svelte";
+  import Header from "./Components/Header.svelte";
+  import Form from "./Components/Form.svelte";
+  import Preview from "./Components/Preview.svelte";
   import { onMount } from "svelte";
 
   let gridLayouts = [];
@@ -48,7 +48,7 @@
 </script>
 
 <style>
-  @import url("https://rsms.me/inter/inter.css");
+  @import url("https://fonts.googleapis.com/css?family=Source+Code+Pro:500|Source+Sans+Pro:400,700&display=swap");
 
   :global(*, *::after, *::before) {
     -webkit-font-smoothing: antialiased;
@@ -69,8 +69,10 @@
     --drop-shadow: 0px 2px 4px rgba(199, 206, 209, 0.4);
   }
   :global(body) {
-    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont,
+      "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+      "Helvetica Neue", sans-serif;
+    font-weight: 500;
     padding: 80px;
     color: #0f2e3d;
     background: #f7fbfc;
@@ -84,9 +86,9 @@
   }
 </style>
 
-<InfoPanel {isOpen} on:close={closeInfo} />
+<Info {isOpen} on:close={closeInfo} />
 <main>
-  <Headline howMany={gridLayouts.length} on:open={openModal} />
-  <GridForm on:calculate={calculateValues} />
-  <GridList grids={gridLayouts} />
+  <Header howMany={gridLayouts.length} on:open={openModal} />
+  <Form on:calculate={calculateValues} />
+  <Preview grids={gridLayouts} />
 </main>

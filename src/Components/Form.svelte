@@ -39,9 +39,13 @@
     align-items: flex-end;
   }
   .form {
+    width: 200px;
     margin-right: 20px;
     display: flex;
     flex-direction: column-reverse;
+  }
+  .form:last-child {
+    margin-right: 0;
   }
   label {
     font-size: 14px;
@@ -60,27 +64,27 @@
     margin-right: 8px;
   }
   input {
+    flex-basis: 100%;
     font-family: "Source Code Pro", monospace;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1;
     border: 1px solid var(--color-white);
     color: var(--color-gray-dark);
-    flex: 1;
     transition: border-color 200ms linear;
-    padding: 16px;
-    margin-bottom: 20px;
+    height: 60px;
+    padding-left: 16px;
     border-radius: 4px;
     margin: 0;
     background: var(--color-white);
     box-shadow: var(--drop-shadow);
-    width: 200px;
   }
   input:focus {
     outline: none;
     border: 1px solid var(--color-accent);
   }
   button {
+    flex-basis: 100%;
     background: var(--color-accent);
     border: none;
     border-radius: 8px;
@@ -88,13 +92,12 @@
     cursor: pointer;
     font-size: 16px;
     font-weight: 700;
-    height: 54px;
+    height: 60px;
     line-height: 1;
     margin: 0;
     outline: none;
     text-align: center;
     transition: background-color 200ms linear;
-    width: 200px;
   }
   button:hover {
     background: var(--color-accent-dark);
@@ -132,5 +135,7 @@
     </label>
   </div>
 
-  <button on:click={sendGrids}>Calculate</button>
+  <div class="form">
+    <button on:click={sendGrids}>Calculate</button>
+  </div>
 </section>

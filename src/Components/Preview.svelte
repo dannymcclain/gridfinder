@@ -4,7 +4,6 @@
 
 <style>
   .grid-previews-container {
-    flex: 1;
     display: flex;
     flex-direction: column;
     border-radius: 4px;
@@ -23,7 +22,7 @@
     pointer-events: none;
     background-image: linear-gradient(
       to right,
-      rgba(255, 255, 255, 0) 88%,
+      rgba(255, 255, 255, 0) 80%,
       rgba(255, 255, 255, 1) 95%
     );
     height: 100%;
@@ -42,42 +41,44 @@
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    overflow-x: scroll;
+    overflow-x: hidden;
     padding-bottom: 20px;
   }
-  .specs {
+  .specs-container {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     margin-bottom: 20px;
   }
+  .specs {
+    margin-right: 40px;
+  }
 
-  .specs p {
+  .specs-title {
     color: var(--color-gray-mid);
     font-size: 14px;
     font-weight: 700;
     line-height: 1;
-    margin-right: 12px;
+    margin-bottom: 8px;
   }
 
-  .specs p .value-text {
+  .specs-value {
     color: var(--color-gray-dark);
-  }
-  .margin {
-    flex: none;
-    height: 40px;
-    background: var(--color-white);
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1;
   }
 
   .column {
     flex: none;
-    height: 40px;
+    height: 8px;
+    border-radius: 1px;
     background: var(--color-accent);
-    border-radius: 2px;
+    opacity: 0.35;
   }
   .gutter {
     flex: none;
-    height: 40px;
+    height: 8;
     background: var(--color-white);
   }
   .no-grids {
@@ -88,28 +89,22 @@
 <section class="grid-previews-container">
   {#each grids as grid, i}
     <div class="layout" key={'Layout ' + i}>
-      <div class="specs">
-        <p>
-          Column width:
-          <span class="value-text">{grid.column}</span>
-        </p>
-        <p>
-          Gutter width:
-          <span class="value-text">{grid.gutter}</span>
-        </p>
-        <!-- <p>
-          Margin:
-          <span class="value-text">{grid.margin}</span>
-        </p> -->
+      <div class="specs-container">
+        <div class="specs">
+          <p class="specs-title">Column width:</p>
+          <p class="specs-value">{grid.column}</p>
+        </div>
+        <div class="specs">
+          <p class="specs-title">Gutter width:</p>
+          <p class="specs-value">{grid.gutter}</p>
+        </div>
       </div>
       <div class="grid-preview">
-        <div class="margin" style="width: {grid.margin}px" />
         {#each Array(grid.columns - 1) as columnPreview, i}
           <div class="column" style="width: {grid.column}px" />
           <div class="gutter" style="width: {grid.gutter}px" />
         {/each}
         <div class="column" style="width: {grid.column}px;" />
-        <div class="margin" style="width: {grid.margin}px;" />
       </div>
 
     </div>

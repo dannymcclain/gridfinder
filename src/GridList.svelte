@@ -7,7 +7,6 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    border: 1px solid var(--gray-color-light);
     border-radius: 4px;
     background: var(--color-white);
     box-shadow: var(--drop-shadow);
@@ -24,7 +23,7 @@
     pointer-events: none;
     background-image: linear-gradient(
       to right,
-      rgba(255, 255, 255, 0) 80%,
+      rgba(255, 255, 255, 0) 88%,
       rgba(255, 255, 255, 1) 95%
     );
     height: 100%;
@@ -36,7 +35,7 @@
     display: flex;
     flex-direction: column;
     padding: 40px 40px 20px;
-    border-bottom: 1px solid var(--gray-color-light);
+    border-bottom: 1px solid rgba(213, 218, 221, 0.5);
   }
   .grid-preview {
     flex: 0;
@@ -54,7 +53,7 @@
   }
 
   .specs p {
-    color: var(--gray-color-mid);
+    color: var(--color-gray-mid);
     font-size: 12px;
     font-weight: 800;
     letter-spacing: -0.02em;
@@ -63,27 +62,24 @@
   }
 
   .specs p .value-text {
-    color: var(--gray-color-dark);
+    color: var(--color-gray-dark);
   }
   .margin {
     flex: none;
     height: 40px;
     background: var(--color-white);
-    /* opacity: 0.2; */
   }
 
   .column {
     flex: none;
     height: 40px;
-    background: var(--accent-color);
+    background: var(--color-accent);
     border-radius: 2px;
   }
-
   .gutter {
     flex: none;
     height: 40px;
     background: var(--color-white);
-    /* opacity: 0.15; */
   }
   .no-grids {
     padding: 40px;

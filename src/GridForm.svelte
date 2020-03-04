@@ -49,7 +49,7 @@
     letter-spacing: -0.02em;
     line-height: 14px;
     margin-bottom: 8px;
-    color: var(--gray-color-mid);
+    color: var(--color-gray-dark);
     transition: color 200ms linear;
     display: flex;
     flex-direction: row;
@@ -61,8 +61,8 @@
     margin-right: 8px;
   }
   input {
-    border: 1px solid var(--gray-color-light);
-    color: var(--gray-color-dark);
+    border: 1px solid var(--color-white);
+    color: var(--color-gray-dark);
     flex: 1;
     transition: border-color 200ms linear;
     padding: 16px;
@@ -78,13 +78,10 @@
   }
   input:focus {
     outline: none;
-    border: 1px solid var(--accent-color);
-  }
-  input:focus + .label {
-    color: var(--gray-color-dark);
+    border: 1px solid var(--color-accent);
   }
   button {
-    background: var(--accent-color);
+    background: var(--color-accent);
     border: none;
     border-radius: 8px;
     color: #fff;
@@ -101,7 +98,7 @@
     width: 200px;
   }
   button:hover {
-    background: var(--accent-color-dark);
+    background: var(--color-accent-dark);
   }
 
   input[type="number"]::-webkit-inner-spin-button,
@@ -113,7 +110,7 @@
 
 <section class="inputs">
   <div class="form">
-    <input type="number" bind:value={totalWidth} />
+    <input class="total-width-input" type="number" bind:value={totalWidth} />
     <label class="label">
       <img src="./images/icon-totalWidth.svg" alt="Total width icon" />
       Total Width

@@ -48,6 +48,8 @@
 </script>
 
 <style>
+  @import url("https://rsms.me/inter/inter.css");
+
   :global(*, *::after, *::before) {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -55,21 +57,23 @@
     padding: 0;
     box-sizing: border-box;
   }
+
   :global(:root) {
-    --accent-color: #6d50e2;
-    --accent-color-dark: #4b31af;
-    --gray-color-light: #d5dde2;
-    --gray-color-mid: #8d95a5;
-    --gray-color-dark: #0b152f;
+    --color-accent: #3db8f5;
+    --color-accent-dark: #0099e5;
+    --color-gray-ultralight: #f7fbfc;
+    --color-gray-light: #d5dadd;
+    --color-gray-mid: #878e92;
+    --color-gray-dark: #0f2e3d;
     --color-white: #fff;
-    --drop-shadow: 0px 2px 4px rgba(213, 221, 226, 0.6);
+    --drop-shadow: 0px 2px 4px rgba(199, 206, 209, 0.4);
   }
   :global(body) {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     padding: 80px;
-    color: var(--gray-color-dark);
-    background: #fafcfd;
+    color: #0f2e3d;
+    background: #f7fbfc;
   }
 
   main {

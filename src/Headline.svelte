@@ -29,15 +29,14 @@
   }
   h1 span {
     margin-right: 4px;
-    color: var(--accent-color);
+    color: var(--color-accent);
   }
   .info {
     font-size: 12px;
     font-weight: 800;
     letter-spacing: -0.02em;
     line-height: 14px;
-    color: var(--gray-color-mid);
-    transition: color 200ms linear;
+    color: var(--color-accent);
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -46,7 +45,7 @@
   }
   .info:hover {
     cursor: pointer;
-    color: var(--gray-color-dark);
+    color: var(--color-accent-dark);
   }
   .info img {
     margin-right: 4px;

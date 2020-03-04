@@ -23,6 +23,8 @@
 </script>
 
 <style>
+  @import url("https://fonts.googleapis.com/css?family=Roboto+Mono:500&display=swap");
+
   .info {
     display: flex;
     flex-direction: row;
@@ -58,7 +60,6 @@
     opacity: 0;
     transition: transform 200ms cubic-bezier(0.35, 0, 0, 1),
       opacity 250ms linear;
-    /* transition-delay: 100ms; */
   }
   .info.is-open .info-panel {
     transform: translateX(0);
@@ -80,48 +81,43 @@
     font-weight: 800;
     letter-spacing: -0.02em;
     line-height: 14px;
-    color: var(--gray-color-mid);
-    transition: color 200ms linear;
+    color: var(--color-accent);
   }
   .close:hover {
     cursor: pointer;
   }
   .close:hover p {
-    color: var(--gray-color-dark);
+    color: var(--color-accent-dark);
   }
   h2 {
     font-weight: 800;
     font-size: 32px;
     line-height: 38px;
-    color: var(--gray-color-dark);
+    color: var(--color-gray-dark);
     margin-bottom: 20px;
   }
   p {
     font-weight: 500;
     font-size: 16px;
     line-height: 28px;
-    color: var(--gray-color-mid);
+    color: var(--color-gray-mid);
   }
-  code {
-    font-family: Consolas, Menlo, monospace;
-    font-size: 13px;
-    padding: 4px 6px;
-    font-weight: 600;
-    /* color: var(--accent-color); */
-    border: 1px solid var(--gray-color-light);
-    background: #fafcfd;
-    border-radius: 2px;
+  strong {
+    font-weight: 700;
   }
   .created-by {
     margin-top: 40px;
-    font-size: 14px;
   }
   a {
-    color: var(--gray-color-mid);
-    text-decoration: underline;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 14px;
+    color: var(--color-accent);
+    text-decoration: none;
   }
   a:hover {
-    color: var(--accent-color);
+    color: var(--color-accent-dark);
   }
 </style>
 
@@ -135,17 +131,16 @@
     <p>
       Pixel Grids is a simple tool to help you calculate pixel-perfect grids.
       Enter the
-      <code>total width</code>
+      <strong>total width</strong>
       of your content, the
-      <code>number of columns</code>
+      <strong>number of columns</strong>
       you want, and the
-      <code>minimum gutter</code>
+      <strong>minimum gutter</strong>
       size you’d accept, and Pixel Grids will calculate every grid layout that
       contains only whole pixel values.
     </p>
-    <p class="created-by">
-      ✌️ Created by
-      <a href="https://dannymcclain.com" target="_blank">Danny McClain</a>
-    </p>
+    <a class="created-by" href="https://dannymcclain.com" target="_blank">
+      ✌️ Created by Danny McClain
+    </a>
   </div>
 </div>

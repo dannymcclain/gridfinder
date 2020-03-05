@@ -64,7 +64,7 @@
     margin-right: 8px;
   }
   input {
-    flex-basis: 100%;
+    padding: 0 0 0 16px;
     font-family: "Source Code Pro", monospace;
     font-weight: 500;
     font-size: 18px;
@@ -73,7 +73,6 @@
     color: var(--color-gray-dark);
     transition: border-color 200ms linear;
     height: 60px;
-    padding-left: 16px;
     border-radius: 4px;
     margin: 0;
     background: var(--color-white);
@@ -84,7 +83,7 @@
     border: 1px solid var(--color-accent);
   }
   button {
-    flex-basis: 100%;
+    height: 60px;
     background: var(--color-accent);
     border: none;
     border-radius: 8px;
@@ -92,7 +91,6 @@
     cursor: pointer;
     font-size: 16px;
     font-weight: 700;
-    height: 60px;
     line-height: 1;
     margin: 0;
     outline: none;

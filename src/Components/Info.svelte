@@ -101,17 +101,6 @@
     line-height: 28px;
     color: var(--color-gray-dark);
   }
-  /* code {
-    font-family: "Source Code Pro", monospace;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1;
-    color: var(--color-accent-dark);
-    padding: 2px 4px;
-    background: rgba(61, 184, 245, 0.1);
-    border: 1px solid var(--color-accent);
-    border-radius: 4px;
-  } */
   .created-by {
     margin-top: 40px;
   }

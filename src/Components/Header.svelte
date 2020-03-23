@@ -18,7 +18,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     max-width: 860px;
     margin-bottom: 40px;
   }
@@ -30,6 +30,7 @@
   h1 span {
     margin-right: 2px;
     color: var(--color-accent);
+    display: block;
   }
   .info {
     font-size: 14px;
@@ -53,8 +54,8 @@
 
 <header>
   <h1>
-    <span class="accent">{howMany}</span>
-    Pixel Grids
+    Grid Finder
+    <span class="accent">found {howMany} grids.</span>
   </h1>
   <div class="info" on:click={openModal}>
     <img src="./images/icon-info.svg" alt="info icon" />

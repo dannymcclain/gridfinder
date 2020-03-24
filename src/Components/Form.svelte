@@ -2,6 +2,7 @@
   import { onMount } from "svelte";
   import { onDestroy } from "svelte";
   import { createEventDispatcher } from "svelte";
+  import Input from "./Input.svelte";
 
   let totalWidth = 1200;
   let columns = 12;
@@ -47,7 +48,7 @@
     flex-direction: column-reverse;
     background: green;
   }
-  label {
+  /* label {
     font-size: 14px;
     font-weight: 700;
     line-height: 1;
@@ -70,18 +71,16 @@
     margin: 0;
   }
   input:focus {
-  }
+  } */
   button {
     margin: 0;
   }
-  button:hover {
-  }
 
-  input[type="number"]::-webkit-inner-spin-button,
+  /* input[type="number"]::-webkit-inner-spin-button,
   input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
-  }
+  } */
 
   @media (min-width: 680px) {
     section {
@@ -93,7 +92,7 @@
 
 <section>
   <div class="form">
-    <input
+    <!-- <input
       size="1"
       class="total-width-input"
       type="number"
@@ -101,7 +100,11 @@
     <label class="label">
       <img src="./images/icon-totalWidth.svg" alt="Total width icon" />
       Total Width
-    </label>
+    </label> -->
+    <Input
+      bind:value={totalWidth}
+      label="Total Width"
+      src="./images/icon-totalWidth.svg" />
   </div>
 
   <div class="form">

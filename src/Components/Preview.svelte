@@ -4,6 +4,7 @@
 
 <style>
   .grid-previews-container {
+    margin: 0 20px 80px;
     display: flex;
     flex-direction: column;
     border-radius: 4px;
@@ -11,7 +12,7 @@
     box-shadow: var(--drop-shadow);
     max-width: 860px;
     position: relative;
-    margin-bottom: 80px;
+    /* margin-bottom: 80px; */
   }
   .grid-previews-container:after {
     content: "";

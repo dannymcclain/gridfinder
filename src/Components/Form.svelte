@@ -41,7 +41,6 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
-    background: rgba(255, 35, 35, 0.3);
   }
   .calculate {
     display: flex;

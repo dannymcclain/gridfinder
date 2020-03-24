@@ -36,25 +36,16 @@
 
 <style>
   section {
-    margin-bottom: 40px;
-    padding: 0 20px;
-    /* display: grid;
-    grid-template-columns: repeat(2, 20px [col-start]); */
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    margin: 0 20px 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
     background: rgba(255, 35, 35, 0.3);
   }
   .form {
-    flex: auto;
-    /* max-width: 200px; */
-    margin-right: 0;
     display: flex;
     flex-direction: column-reverse;
     background: green;
-  }
-  .form:nth-child(odd) {
-    margin-right: 20px;
   }
   label {
     font-size: 14px;
@@ -73,44 +64,17 @@
     margin-right: 8px;
   }
   input {
-    flex: 1;
-    min-width: 1px;
-    padding: 16px;
-    font-family: "Source Code Pro", monospace;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 1;
-    border: 1px solid var(--color-white);
-    color: var(--color-gray-dark);
-    transition: border-color 200ms linear;
-    height: 60px;
-    border-radius: 4px;
+    min-width: 0;
+    box-sizing: border-box;
+    width: 100%;
     margin: 0;
-    background: var(--color-white);
-    box-shadow: var(--drop-shadow);
   }
   input:focus {
-    outline: none;
-    border: 1px solid var(--color-accent);
   }
   button {
-    flex: 1;
-    height: 60px;
-    background: var(--color-accent);
-    border: none;
-    border-radius: 8px;
-    color: #fff;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 1;
     margin: 0;
-    outline: none;
-    text-align: center;
-    transition: background-color 200ms linear;
   }
   button:hover {
-    background: var(--color-accent-dark);
   }
 
   input[type="number"]::-webkit-inner-spin-button,
@@ -118,11 +82,22 @@
     -webkit-appearance: none;
     margin: 0;
   }
+
+  @media (min-width: 680px) {
+    section {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-gap: 20px;
+    }
+  }
 </style>
 
 <section>
   <div class="form">
-    <input class="total-width-input" type="number" bind:value={totalWidth} />
+    <input
+      size="1"
+      class="total-width-input"
+      type="number"
+      bind:value={totalWidth} />
     <label class="label">
       <img src="./images/icon-totalWidth.svg" alt="Total width icon" />
       Total Width
@@ -130,18 +105,18 @@
   </div>
 
   <div class="form">
-    <input type="number" bind:value={columns} />
+    <input size="1" type="number" bind:value={columns} />
     <label class="label">
       <img src="./images/icon-columns.svg" alt="Total width icon" />
-      Number of Columns
+      Columns
     </label>
   </div>
 
   <div class="form">
-    <input type="number" bind:value={minGutter} />
+    <input size="1" type="number" bind:value={minGutter} />
     <label class="label">
       <img src="./images/icon-minGutter.svg" alt="Total width icon" />
-      Minimum Gutter
+      Min. Gutter
     </label>
   </div>
 

@@ -2,7 +2,7 @@
   import Info from "./Components/Info.svelte";
   import Header from "./Components/Header.svelte";
   import Form from "./Components/Form/Form.svelte";
-  import Preview from "./Components/Preview/Preview.svelte";
+  import Preview from "./Components/GridPreview/GridPreview.svelte";
   import { onMount } from "svelte";
 
   let gridLayouts = [];

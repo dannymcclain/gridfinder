@@ -1,5 +1,6 @@
 <script>
   import { onMount } from "svelte";
+  import { onDestroy } from "svelte";
   import { createEventDispatcher } from "svelte";
 
   let totalWidth = 1200;
@@ -28,24 +29,32 @@
     });
     sendGrids();
   });
+  onDestroy(() => {
+    document.removeEventListener("keydown", event);
+  });
 </script>
 
 <style>
-  .inputs {
+  section {
     margin-bottom: 40px;
+    padding: 0 20px;
+    /* display: grid;
+    grid-template-columns: repeat(2, 20px [col-start]); */
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-end;
+    flex-wrap: wrap;
+    background: rgba(255, 35, 35, 0.3);
   }
   .form {
-    width: 200px;
-    margin-right: 20px;
+    flex: auto;
+    /* max-width: 200px; */
+    margin-right: 0;
     display: flex;
     flex-direction: column-reverse;
+    background: green;
   }
-  .form:last-child {
-    margin-right: 0;
+  .form:nth-child(odd) {
+    margin-right: 20px;
   }
   label {
     font-size: 14px;
@@ -64,7 +73,9 @@
     margin-right: 8px;
   }
   input {
-    padding: 0 0 0 16px;
+    flex: 1;
+    min-width: 1px;
+    padding: 16px;
     font-family: "Source Code Pro", monospace;
     font-weight: 500;
     font-size: 18px;
@@ -83,6 +94,7 @@
     border: 1px solid var(--color-accent);
   }
   button {
+    flex: 1;
     height: 60px;
     background: var(--color-accent);
     border: none;
@@ -108,7 +120,7 @@
   }
 </style>
 
-<section class="inputs">
+<section>
   <div class="form">
     <input class="total-width-input" type="number" bind:value={totalWidth} />
     <label class="label">

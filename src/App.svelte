@@ -50,14 +50,6 @@
 <style>
   @import url("https://fonts.googleapis.com/css?family=Source+Code+Pro:500|Source+Sans+Pro:400,700&display=swap");
 
-  :global(*, *::after, *::before) {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
   :global(:root) {
     --color-accent: #3db8f5;
     --color-accent-dark: #0099e5;
@@ -73,7 +65,6 @@
       "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
       "Helvetica Neue", sans-serif;
     font-weight: 500;
-    padding: 80px;
     color: #0f2e3d;
     background: #f7fbfc;
   }

@@ -19,8 +19,9 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    max-width: 860px;
+    /* max-width: 860px; */
     margin-bottom: 40px;
+    padding: 20px;
   }
   h1 {
     font-size: 32px;

@@ -1,4 +1,5 @@
 <script>
+  import Specs from "./Specs.svelte";
   export let grids;
 </script>
 
@@ -12,7 +13,6 @@
     box-shadow: var(--drop-shadow);
     max-width: 860px;
     position: relative;
-    /* margin-bottom: 80px; */
   }
   .grid-previews-container:after {
     content: "";
@@ -45,30 +45,6 @@
     overflow-x: hidden;
     padding-bottom: 20px;
   }
-  .specs-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    margin-bottom: 20px;
-  }
-  .specs {
-    margin-right: 40px;
-  }
-
-  .specs-title {
-    color: var(--color-gray-mid);
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 1;
-    margin-bottom: 8px;
-  }
-
-  .specs-value {
-    color: var(--color-gray-dark);
-    font-size: 32px;
-    font-weight: 700;
-    line-height: 1;
-  }
 
   .column {
     flex: none;
@@ -90,16 +66,8 @@
 <section class="grid-previews-container">
   {#each grids as grid, i}
     <div class="layout" key={'Layout ' + i}>
-      <div class="specs-container">
-        <div class="specs">
-          <p class="specs-title">Column width:</p>
-          <p class="specs-value">{grid.column}</p>
-        </div>
-        <div class="specs">
-          <p class="specs-title">Gutter width:</p>
-          <p class="specs-value">{grid.gutter}</p>
-        </div>
-      </div>
+      <Specs {grid} />
+
       <div class="grid-preview">
         {#each Array(grid.columns - 1) as columnPreview, i}
           <div class="column" style="width: {grid.column}px" />

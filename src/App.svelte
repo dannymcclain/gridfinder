@@ -1,8 +1,8 @@
 <script>
   import Info from "./Components/Info.svelte";
   import Header from "./Components/Header.svelte";
-  import Form from "./Components/Form.svelte";
-  import Preview from "./Components/Preview.svelte";
+  import Form from "./Components/Form/Form.svelte";
+  import Preview from "./Components/Preview/Preview.svelte";
   import { onMount } from "svelte";
 
   let gridLayouts = [];

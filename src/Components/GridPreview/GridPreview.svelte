@@ -5,7 +5,7 @@
 </script>
 
 <style>
-  .grid-previews-container {
+  .grid-previews {
     margin: 0 20px 80px;
     display: flex;
     flex-direction: column;
@@ -15,7 +15,7 @@
     max-width: 860px;
     position: relative;
   }
-  .grid-previews-container:after {
+  .grid-previews:after {
     content: "";
     position: absolute;
     z-index: 1;
@@ -36,7 +36,7 @@
   }
 </style>
 
-<section class="grid-previews-container">
+<section class="grid-previews">
   {#each grids as grid, i}
     <Layout {grid} key={'Layout ' + i} />
   {:else}

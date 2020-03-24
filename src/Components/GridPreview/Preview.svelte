@@ -3,7 +3,7 @@
 </script>
 
 <style>
-  .grid-preview {
+  section {
     flex: 0;
     display: flex;
     flex-direction: row;
@@ -26,10 +26,10 @@
   }
 </style>
 
-<div class="grid-preview">
+<section>
   {#each Array(grid.columns - 1) as columnPreview, i}
     <div class="column" style="width: {grid.column}px" />
     <div class="gutter" style="width: {grid.gutter}px" />
   {/each}
   <div class="column" style="width: {grid.column}px;" />
-</div>
+</section>

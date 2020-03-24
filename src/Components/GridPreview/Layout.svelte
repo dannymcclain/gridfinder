@@ -9,8 +9,13 @@
     flex: 0;
     display: flex;
     flex-direction: column;
-    padding: 40px 40px 20px;
+    padding: 20px;
     border-bottom: 1px solid rgba(213, 218, 221, 0.5);
+  }
+  @media (min-width: 680px) {
+    div {
+      padding: 40px 40px 20px;
+    }
   }
 </style>
 

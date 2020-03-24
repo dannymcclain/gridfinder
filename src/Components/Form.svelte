@@ -43,44 +43,14 @@
     grid-gap: 20px;
     background: rgba(255, 35, 35, 0.3);
   }
-  .form {
+  .calculate {
     display: flex;
     flex-direction: column-reverse;
-    background: green;
   }
-  /* label {
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 1;
-    margin-bottom: 8px;
-    color: var(--color-gray-dark);
-    transition: color 200ms linear;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  label img {
-    margin-right: 8px;
-  }
-  input {
-    min-width: 0;
-    box-sizing: border-box;
-    width: 100%;
-    margin: 0;
-  }
-  input:focus {
-  } */
+
   button {
     margin: 0;
   }
-
-  /* input[type="number"]::-webkit-inner-spin-button,
-  input[type="number"]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-  } */
 
   @media (min-width: 680px) {
     section {
@@ -91,39 +61,17 @@
 </style>
 
 <section>
-  <div class="form">
-    <!-- <input
-      size="1"
-      class="total-width-input"
-      type="number"
-      bind:value={totalWidth} />
-    <label class="label">
-      <img src="./images/icon-totalWidth.svg" alt="Total width icon" />
-      Total Width
-    </label> -->
-    <Input
-      bind:value={totalWidth}
-      label="Total Width"
-      src="./images/icon-totalWidth.svg" />
-  </div>
+  <Input
+    bind:value={totalWidth}
+    label="Total Width"
+    src="./images/icon-totalWidth.svg" />
+  <Input bind:value={columns} label="Columns" src="./images/icon-columns.svg" />
+  <Input
+    bind:value={minGutter}
+    label="Min. Gutter"
+    src="./images/icon-minGutter.svg" />
 
-  <div class="form">
-    <input size="1" type="number" bind:value={columns} />
-    <label class="label">
-      <img src="./images/icon-columns.svg" alt="Total width icon" />
-      Columns
-    </label>
-  </div>
-
-  <div class="form">
-    <input size="1" type="number" bind:value={minGutter} />
-    <label class="label">
-      <img src="./images/icon-minGutter.svg" alt="Total width icon" />
-      Min. Gutter
-    </label>
-  </div>
-
-  <div class="form">
+  <div class="calculate">
     <button on:click={sendGrids}>Calculate</button>
   </div>
 </section>

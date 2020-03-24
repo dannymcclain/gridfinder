@@ -5,13 +5,16 @@
 </script>
 
 <style>
+  div {
+    display: flex;
+    flex-direction: column-reverse;
+  }
   label {
     font-size: 14px;
     font-weight: 700;
     line-height: 1;
     margin-bottom: 8px;
-    /* color: var(--color-gray-dark); */
-    color: red;
+    color: var(--color-gray-dark);
     transition: color 200ms linear;
     display: flex;
     flex-direction: row;
@@ -34,10 +37,15 @@
     -webkit-appearance: none;
     margin: 0;
   }
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
 </style>
 
-<input size="1" type="number" bind:value />
-<label>
-  <img {src} alt="{label} icon" />
-  {label}
-</label>
+<div>
+  <input size="1" type="number" bind:value />
+  <label>
+    <img {src} alt="{label} icon" />
+    {label}
+  </label>
+</div>

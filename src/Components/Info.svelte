@@ -85,6 +85,12 @@
   .close:hover {
     cursor: pointer;
   }
+  .close-icon {
+    transition: stroke 150ms linear;
+  }
+  .close:hover .close-icon {
+      stroke: var(--color-accent);
+    }
 
   h2 {
     font-size: 32px;
@@ -119,6 +125,7 @@
     color: #000;
     text-decoration: none;
     border-bottom: 2px solid var(--color-accent);
+    transition: border-color 150ms linear;
   }
   .created-by a:hover {
     border-bottom: 2px solid #000;
@@ -152,7 +159,10 @@
   <div class="info-panel">
     <div class="main-content">
       <div class="close" on:click={closeModal}>
-        <img src="./images/icon-close.svg" alt="close icon" />
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path class="close-icon" d="M1 1L11 11M11 1L1 11" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
       </div>
       <h2>About</h2>
       <p>

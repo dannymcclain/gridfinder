@@ -60,6 +60,7 @@
     line-height: 1;
     border-radius: 4px;
     cursor: pointer;
+    transition: color 150ms linear;
   }
   button:active {
     background: #000;

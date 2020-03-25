@@ -1,6 +1,5 @@
-# 📏 Pixel Grids
+# Grid Finder
 
-Pixel Grids is a simple tool to help you calculate pixel-perfect grids.
-Enter the total width of your content, the number of columns you want, and the minimum gutterm size you’d accept, and Pixel Grids will calculate every grid layout that contains only whole pixel values.
+Grid Finder is a tool to help you calculate perfect grids. Enter the total width of your content, the number of columns of want, and the minimum size you want your gutters and Grid Finder will calculate every grid layout that contains only whole values.
 
-✌️ Created by [Danny McClain](https://dannymcclain.com).
+Check it out at [gridfinder.dannymcclain.com](https://gridfinder.dannymcclain.com).

@@ -19,37 +19,46 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    /* max-width: 860px; */
-    margin-bottom: 40px;
+    /* margin-bottom: 40px; */
     padding: 20px;
   }
   h1 {
     font-size: 32px;
-    font-weight: 700;
-    line-height: 1;
+    line-height: 38px;
+    font-weight: 800;
+    color: #000000;
   }
   h1 span {
-    margin-right: 2px;
-    color: var(--color-accent);
+    color: #fff;
     display: block;
   }
   .info {
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 1;
-    color: var(--color-accent);
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background: #000000;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     flex-wrap: nowrap;
   }
   .info:hover {
     cursor: pointer;
-    color: var(--color-accent-dark);
   }
   .info img {
-    margin-right: 4px;
+    margin-bottom: 2px;
+  }
+
+  @media (min-width: 680px) {
+    header {
+      margin-bottom: 20px;
+    }
+    h1 {
+      font-size: 64px;
+      line-height: 77px;
+      letter-spacing: -0.02em;
+    }
   }
 </style>
 
@@ -60,6 +69,5 @@
   </h1>
   <div class="info" on:click={openModal}>
     <img src="./images/icon-info.svg" alt="info icon" />
-    <p>Info</p>
   </div>
 </header>

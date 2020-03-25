@@ -65,29 +65,22 @@
     transform: translateX(0);
     opacity: 1;
   }
+
   .close {
-    margin-bottom: 40px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background: #000000;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     flex-wrap: nowrap;
-  }
-  .close img {
-    margin-right: 4px;
-  }
-  .close p {
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 1;
-    color: var(--color-accent);
   }
   .close:hover {
     cursor: pointer;
   }
-  .close:hover p {
-    color: var(--color-accent-dark);
-  }
+
   h2 {
     font-weight: 700;
     font-size: 32px;
@@ -122,7 +115,6 @@
     <div class="main-content">
       <div class="close" on:click={closeModal}>
         <img src="./images/icon-close.svg" alt="close icon" />
-        <p>Close</p>
       </div>
       <h2>About</h2>
       <p>

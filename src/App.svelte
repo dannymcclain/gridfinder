@@ -2,7 +2,7 @@
   import Info from "./Components/Info.svelte";
   import Header from "./Components/Header.svelte";
   import Form from "./Components/Form/Form.svelte";
-  import Preview from "./Components/GridPreview/GridPreview.svelte";
+  import Preview from "./Components/Preview/Preview.svelte";
   import { onMount } from "svelte";
 
   let gridLayouts = [];
@@ -48,10 +48,10 @@
 </script>
 
 <style>
-  @import url("https://fonts.googleapis.com/css?family=Source+Code+Pro:500|Source+Sans+Pro:400,700&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap");
 
   :global(:root) {
-    --color-accent: #3db8f5;
+    --color-accent: #45e560;
     --color-accent-dark: #0099e5;
     --color-gray-ultralight: #f7fbfc;
     --color-gray-light: #d5dadd;
@@ -61,19 +61,29 @@
     --drop-shadow: 0px 2px 4px rgba(199, 206, 209, 0.4);
   }
   :global(body) {
-    font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont,
-      "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
-      "Helvetica Neue", sans-serif;
-    font-weight: 500;
-    color: #0f2e3d;
-    background: #f7fbfc;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-weight: 400;
+    color: #000;
+    background: #45e560;
   }
 
   main {
+    margin: 20px auto;
     display: flex;
     flex-direction: column;
     max-width: 860px;
     margin: 0 auto;
+  }
+  @media (min-width: 520px) {
+    main {
+      margin: 40px auto;
+    }
+  }
+  @media (min-width: 680px) {
+    main {
+      margin: 80px auto;
+    }
   }
 </style>
 

@@ -1,5 +1,6 @@
 <script>
   import { onMount } from "svelte";
+  import { onDestroy } from "svelte";
   import { createEventDispatcher } from "svelte";
   export let isOpen = false;
 
@@ -20,6 +21,9 @@
       }
     });
   });
+  onDestroy(() => {
+    document.removeEventListener("keydown", event);
+  });
 </script>
 
 <style>
@@ -38,8 +42,8 @@
     z-index: 11;
     pointer-events: none;
     opacity: 0;
-    background: rgba(11, 21, 47, 0.4);
     transition: opacity 150ms linear;
+    background: rgba(69, 229, 96, 0.8);
   }
   .info.is-open {
     opacity: 1;
@@ -51,7 +55,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 40px 80px 40px 40px;
+    padding: 20px;
     height: 100%;
     position: relative;
     background: var(--color-white);
@@ -76,16 +80,17 @@
     justify-content: center;
     align-items: center;
     flex-wrap: nowrap;
+    margin-bottom: 20px;
   }
   .close:hover {
     cursor: pointer;
   }
 
   h2 {
-    font-weight: 700;
     font-size: 32px;
     line-height: 38px;
-    color: var(--color-gray-dark);
+    font-weight: 800;
+    color: var(--color-accent);
     margin-bottom: 20px;
   }
   p {
@@ -96,17 +101,50 @@
   }
   .created-by {
     margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
   }
-  a {
-    font-size: 14px;
+  .created-by img {
+    margin-right: 8px;
+  }
+  .created-by p {
     font-weight: 800;
-    letter-spacing: -0.02em;
-    line-height: 1;
-    color: var(--color-accent);
-    text-decoration: none;
+    font-size: 12px;
+    line-height: 15px;
   }
-  a:hover {
-    color: var(--color-accent-dark);
+  .created-by a {
+    color: #000;
+    text-decoration: none;
+    border-bottom: 2px solid var(--color-accent);
+  }
+  .created-by a:hover {
+    border-bottom: 2px solid #000;
+  }
+  @media (min-width: 520px) {
+    .info-panel {
+      padding: 40px;
+    }
+    .close {
+      margin-bottom: 40px;
+    }
+    h2 {
+      font-size: 48px;
+      line-height: 56px;
+      letter-spacing: -0.02em;
+    }
+  }
+  @media (min-width: 680px) {
+    .info-panel {
+      padding: 40px 80px 40px 40px;
+    }
+    h2 {
+      font-size: 64px;
+      line-height: 77px;
+      letter-spacing: -0.02em;
+    }
   }
 </style>
 
@@ -124,8 +162,12 @@
         grid layout that contains only whole values.
       </p>
     </div>
-    <a class="created-by" href="https://dannymcclain.com" target="_blank">
-      ✌️ Created by Danny McClain
-    </a>
+    <div class="created-by">
+      <img src="./images/icon-createdBy.svg" alt="icon" />
+      <p>
+        Created by
+        <a href="https://dannymcclain.com" target="_blank">Danny McClain</a>
+      </p>
+    </div>
   </div>
 </div>

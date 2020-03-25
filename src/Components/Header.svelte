@@ -19,7 +19,6 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    /* margin-bottom: 40px; */
     padding: 20px;
   }
   h1 {
@@ -49,15 +48,30 @@
   .info img {
     margin-bottom: 2px;
   }
+  @media (min-width: 520px) {
+    header {
+      padding: 40px 40px 20px;
+    }
+    h1 {
+      font-size: 48px;
+      line-height: 56px;
+      letter-spacing: -0.02em;
+    }
+  }
 
   @media (min-width: 680px) {
     header {
-      margin-bottom: 20px;
+      padding: 80px 40px 40px;
     }
     h1 {
       font-size: 64px;
       line-height: 77px;
       letter-spacing: -0.02em;
+    }
+  }
+  @media (min-width: 960px) {
+    header {
+      padding: 80px 80px 40px;
     }
   }
 </style>

@@ -22,18 +22,19 @@
   }
 
   .specs h3 {
-    color: var(--color-gray-mid);
-    font-size: 14px;
-    font-weight: 700;
+    color: #000;
     line-height: 1;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1;
   }
 
   .specs h2 {
-    color: var(--color-gray-dark);
     font-size: 32px;
-    font-weight: 700;
-    line-height: 1;
+    line-height: 38px;
+    font-weight: 800;
+    color: #000000;
   }
 
   .preview {
@@ -42,7 +43,7 @@
     flex-direction: row;
     flex-wrap: nowrap;
     overflow-x: hidden;
-    padding-bottom: 20px;
+    padding-bottom: 8px;
   }
 
   .preview .column {
@@ -50,17 +51,31 @@
     height: 8px;
     border-radius: 1px;
     background: var(--color-accent);
-    opacity: 0.35;
+    opacity: 1;
   }
   .preview .gutter {
     flex: none;
     height: 8;
     background: var(--color-white);
   }
-
+  @media (min-width: 520px) {
+    .specs h2 {
+      font-size: 48px;
+      line-height: 56px;
+      letter-spacing: -0.02em;
+    }
+  }
   @media (min-width: 680px) {
     section {
       padding: 40px 40px 20px;
+    }
+    .specs h2 {
+      font-size: 64px;
+      line-height: 77px;
+      letter-spacing: -0.02em;
+    }
+    .preview {
+      padding-bottom: 20px;
     }
   }
 </style>

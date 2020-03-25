@@ -37,7 +37,8 @@
 
 <style>
   section {
-    margin: 0 20px 40px;
+    /* margin: 0 20px 40px; */
+    padding: 0 20px 40px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
@@ -49,12 +50,37 @@
 
   button {
     margin: 0;
+    height: 56px;
+    outline: none;
+    border: none;
+    background: #000;
+    color: #fff;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 1;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  button:active {
+    background: #000;
+    color: var(--color-accent);
+  }
+  @media (min-width: 520px) {
+    section {
+      padding: 0 40px 40px;
+    }
   }
 
   @media (min-width: 680px) {
     section {
       grid-template-columns: 1fr 1fr 1fr 1fr;
       grid-gap: 20px;
+      padding: 0 40px 60px;
+    }
+  }
+  @media (min-width: 960px) {
+    section {
+      padding: 0 80px 60px;
     }
   }
 </style>

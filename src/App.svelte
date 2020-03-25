@@ -69,21 +69,11 @@
   }
 
   main {
-    margin: 20px auto;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    max-width: 860px;
+    max-width: 1280px;
     margin: 0 auto;
-  }
-  @media (min-width: 520px) {
-    main {
-      margin: 40px auto;
-    }
-  }
-  @media (min-width: 680px) {
-    main {
-      margin: 80px auto;
-    }
   }
 </style>
 

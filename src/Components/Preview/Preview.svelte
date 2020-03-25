@@ -6,16 +6,15 @@
 
 <style>
   .grid-previews {
-    margin: 0 20px 80px;
+    margin: 0 20px 40px;
     display: flex;
     flex-direction: column;
     border-radius: 4px;
-    background: var(--color-white);
-    box-shadow: var(--drop-shadow);
-    max-width: 860px;
+    background: #fff;
     position: relative;
   }
   .grid-previews:after {
+    border-radius: 4px;
     content: "";
     position: absolute;
     z-index: 1;
@@ -33,6 +32,23 @@
 
   .no-grids {
     padding: 40px;
+  }
+
+  @media (min-width: 520px) {
+    .grid-previews {
+      margin: 0 40px 40px;
+    }
+  }
+
+  @media (min-width: 680px) {
+    .grid-previews {
+      margin: 0 40px 80px;
+    }
+  }
+  @media (min-width: 960px) {
+    .grid-previews {
+      margin: 0 80px 80px;
+    }
   }
 </style>
 

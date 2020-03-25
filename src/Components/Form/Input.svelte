@@ -39,7 +39,7 @@
     font-size: 20px;
     line-height: 20px;
     color: #000000;
-    transition: border-color 200ms linear;
+    /* transition: border-color 200ms linear; */
   }
   input:focus {
     border: 2px solid #000;

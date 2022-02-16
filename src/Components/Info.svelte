@@ -176,7 +176,7 @@
       <img src="./images/icon-createdBy.svg" alt="icon" />
       <p>
         Created by
-        <a href="https://dannymcclain.com" target="_blank">Danny McClain</a>
+        <a href="https://dannymccla.in" target="_blank">Danny McClain</a>
       </p>
     </div>
   </div>
